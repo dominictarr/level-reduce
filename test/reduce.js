@@ -44,6 +44,12 @@ rimraf(path, function () {
     db.on('reduce:test', function (key, col) {
       console.log('REDUCE', key, col)
     })
+
+    //WARNING. if you use depth: > 0
+    db.reduce.view('test', [ true ])
+      .on('data', function (data) {
+        console.log('DATA', data)
+      })
   })
 })
 
