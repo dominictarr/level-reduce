@@ -56,7 +56,7 @@ module.exports = function (db) {
         key.pop()
         return JSON.stringify(key)
       }, 
-      job  : delayJob(doReduce)
+      job  : doReduce
     })
   }
 }
