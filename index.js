@@ -1,7 +1,6 @@
 var trigger    = require('level-trigger')
 var liveStream = require('level-live-stream')
 var viewStream = require('level-view-stream')
-var delayJob   = require('./delay-job')
 
 var Bucket  = require('range-bucket')
 var map     = require('map-stream')
@@ -52,7 +51,6 @@ module.exports = function (db) {
       map  : function (data) {
         var key = view.bucket.parse(data.key).key
         if(key.length <= view.depth) return
-
         key.pop()
         return JSON.stringify(key)
       }, 
