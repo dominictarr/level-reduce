@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "level-view-stream": "~0.0.3",
-    "level-map": "~0.0.1",
+    "level-map": "~0.1",
     "level-live-stream": "~0.1.0",
     "level-trigger": "~0.1.0",
     "sha1sum": "0.0.1",
