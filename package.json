@@ -7,7 +7,7 @@
     "url": "git://github.com/dominictarr/level-reduce.git"
   },
   "dependencies": {
-    "level-view-stream": "~0.0.3",
+    "level-view-stream": "~0.0.4",
     "level-map": "~0.1",
     "level-live-stream": "~0.1.0",
     "level-trigger": "~0.1.0",
