@@ -19,6 +19,7 @@ module.exports = function (db) {
   db.reduce.view = viewStream(db, db.reduce)
 
   db.reduce.add = function (view) {
+    if(!view.name) throw new Error('reduce must have name')
     views[view.name] = view
     view.bucket = Bucket('mapr', view.name)
     view.depth = (view.depth && view.depth > 0) ? view.depth : 0
@@ -48,6 +49,7 @@ module.exports = function (db) {
     db.trigger.add({
       start: range.start,
       end  : range.end,
+      name : 'RED-'+range.name,
       map  : function (data) {
         var key = view.bucket.parse(data.key).key
         if(key.length <= view.depth) return
