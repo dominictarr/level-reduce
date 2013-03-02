@@ -20,7 +20,7 @@
     "through": "~2.1.0",
     "macgyver": "~1.9.2",
     "rimraf": "~2.0.2",
-    "levelup": "~0.3.2"
+    "levelup": "~0.6"
   },
   "scripts": {
     "test": "set -e; for t in test/*.js; do node $t; done"
